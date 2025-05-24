@@ -1,0 +1,6 @@
+Flask
+gunicorn
+Flask
+python-dotenv
+google-genai
+google
