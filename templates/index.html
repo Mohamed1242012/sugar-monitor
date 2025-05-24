@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sugar Monitor</title>
+    <meta
+      name="description"
+      content="Sugar Monitor is an AI-powered tool to help you monitor your blood sugar, manage diabetes, and receive personalized health insights and plans securely and easily."
+    />
+    <meta
+      name="keywords"
+      content="diabetes, blood sugar, AI health, diabetes monitoring, health insights, personalized health, diabetes management, glucose, A1C, health tracker, secure health app"
+    />
+
+    <!-- Favicons -->
+    <link
+      href="{{ url_for('static', filename='assets/img/logo.png') }}"
+      rel="icon"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/img/logo.png') }}"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Vendor CSS Files -->
+    <link
+      href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link
+      href="{{ url_for('static', filename='assets/css/main.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img
+            src="{{ url_for('static', filename='assets/img/logo.png') }}"
+            alt=""
+          />
+          <h1 class="sitename">Sugar Monitor</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li class="dropdown"></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="#form-sec">Get Started</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="company-badge mb-4">
+                  <i class="bi bi-gear-fill me-2"></i>
+                  Working for your health
+                </div>
+
+                <h1 class="mb-4">
+                  Take Control <br />
+                  Of Your <br />
+                  <span class="accent-text">Sugar</span>
+                </h1>
+
+                <p class="mb-4 mb-md-5">
+                  Monitor your blood sugar levels and other vital health
+                  indicators effortlessly with our advanced AI-powered Plan
+                  Generator.
+                </p>
+
+                <div class="hero-buttons">
+                  <a href="#form-sec" class="btn btn-primary me-0 me-sm-2 mx-1"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                <img
+                  src="{{ url_for('static', filename='assets/img/illustration-1.png') }}"
+                  alt="Hero Image"
+                  class="img-fluid"
+                />
+
+                <div class="customers-badge">
+                  <div class="customer-avatars">
+                    <img
+                      src="{{ url_for('static', filename='assets/img/avatar-1.webp') }}"
+                      alt="Customer 1"
+                      class="avatar"
+                    />
+                    <img
+                      src="{{ url_for('static', filename='assets/img/avatar-2.webp') }}"
+                      alt="Customer 2"
+                      class="avatar"
+                    />
+                    <img
+                      src="{{ url_for('static', filename='assets/img/avatar-3.webp') }}"
+                      alt="Customer 3"
+                      class="avatar"
+                    />
+                    <img
+                      src="{{ url_for('static', filename='assets/img/avatar-4.webp') }}"
+                      alt="Customer 4"
+                      class="avatar"
+                    />
+                    <img
+                      src="{{ url_for('static', filename='assets/img/avatar-5.webp') }}"
+                      alt="Customer 5"
+                      class="avatar"
+                    />
+                    <span class="avatar more">12+</span>
+                  </div>
+                  <p class="mb-0 mt-2">Most customers liked our service.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row stats-row gy-4 mt-5"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-trophy"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>Satisfied Customers</h4>
+                  <p class="mb-0">
+                    We have helped numerous customers monitor their health
+                    effectively.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>Detailed Results</h4>
+                  <p class="mb-0">
+                    Our results are detailed and accurate, ensuring you get the
+                    best insights.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>Highly Trained AI</h4>
+                  <p class="mb-0">
+                    Our AI is highly trained to provide the most accurate health
+                    monitoring.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-award"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>Reliable Service</h4>
+                  <p class="mb-0">
+                    We are committed to providing reliable health monitoring
+                    solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 align-items-center justify-content-between">
+            <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+              <span class="about-meta">WHY MONITOR DIABETES</span>
+              <h2 class="about-title">The Importance of Monitoring Diabetes</h2>
+              <p class="about-description">
+                Monitoring diabetes is crucial for managing blood sugar levels,
+                preventing complications, and maintaining overall health.
+                Regular monitoring helps in making informed decisions about
+                diet, exercise, and medication.
+              </p>
+
+              <div class="row feature-list-wrapper">
+                <div class="col-md-6">
+                  <ul class="feature-list">
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Helps in
+                      maintaining optimal blood sugar levels
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Prevents long-term
+                      complications
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Provides insights
+                      for better lifestyle choices
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="feature-list">
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Assists in
+                      medication adjustments
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Enhances overall
+                      quality of life
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Empowers
+                      individuals to take control of their health
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="image-wrapper">
+                <div
+                  class="images position-relative"
+                  data-aos="zoom-out"
+                  data-aos-delay="400"
+                >
+                  <img
+                    src="{{ url_for('static', filename='assets/img/about-5.jpg') }}"
+                    alt="Business Meeting"
+                    class="img-fluid main-image rounded-4"
+                  />
+                  <img
+                    src="{{ url_for('static', filename='assets/img/about-2.jpeg') }}"
+                    alt="Team Discussion"
+                    class="img-fluid small-image rounded-4"
+                  />
+                </div>
+                <div class="experience-badge floating">
+                  <h3>1500+ <span>Visits</span></h3>
+                  <p>This Month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Features Section -->
+      <section id="features" class="features section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Features</h2>
+          <p>
+            These are the features of our AI-powered diabetes diagnosis service
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a
+                  class="nav-link active show"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-1"
+                >
+                  <h4>AI</h4>
+                </a>
+              </li>
+              <!-- End tab nav item -->
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-2"
+                >
+                  <h4>Results</h4> </a
+                ><!-- End tab nav item -->
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-3"
+                >
+                  <h4>Security</h4>
+                </a>
+              </li>
+              <!-- End tab nav item -->
+            </ul>
+          </div>
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="tab-pane fade active show" id="features-tab-1">
+              <div class="row">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                >
+                  <h3>Advanced AI Technology</h3>
+                  <p class="fst-italic">
+                    Our AI technology is designed to provide accurate and
+                    reliable health monitoring, ensuring you stay on top of your
+                    health.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span
+                        >Utilizes machine learning to analyze your health
+                        data.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span
+                        >Provides personalized health insights and
+                        recommendations.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span
+                        >Continuously improves with more data for better
+                        accuracy.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img
+                    src="{{ url_for('static', filename='assets/img/features-illustration-1.jpeg') }}"
+                    alt=""
+                    class="img-fluid rounded-4"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- End tab content item -->
+            <div class="tab-pane fade" id="features-tab-2">
+              <div class="row">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                >
+                  <h3>Accurate and Evolving Results</h3>
+                  <p class="fst-italic">
+                    Our system delivers highly accurate results, leveraging the
+                    latest advancements in AI. The accuracy of our analysis
+                    improves every day as more data is processed.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span>
+                        Results are validated against medical standards for
+                        reliability.
+                      </span>
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span>
+                        Continuous learning ensures our results become more
+                        precise over time.
+                      </span>
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span>
+                        Personalized feedback helps you understand your health
+                        status with confidence.
+                      </span>
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span>
+                        Our AI adapts and improves daily, providing you with the
+                        most up-to-date and accurate health insights.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img
+                    src="{{ url_for('static', filename='assets/img/features-illustration-2.webp') }}"
+                    alt=""
+                    class="img-fluid rounded-4"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tab-3">
+              <div class="row">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                >
+                  <h3>Security & Privacy</h3>
+                  <ul>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span
+                        >No login needed—your privacy is important to us.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span
+                        >Your data is only kept temporarily while you use our
+                        service and is not saved on our side.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-all"></i>
+                      <span
+                        >We do not keep any records or logs of your
+                        information.</span
+                      >
+                    </li>
+                  </ul>
+                  <p class="fst-italic">
+                    We care about your privacy and do not store your personal
+                    details. However, please note that we use the Gemini AI
+                    service to process your information, and they may have their
+                    own data policies. For full privacy details, please check
+                    Gemini's terms.
+                  </p>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img
+                    src="{{ url_for('static', filename='assets/img/features-illustration-3.jpg') }}"
+                    alt="Security Illustration"
+                    class="img-fluid rounded-4"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- End tab content item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Features Section -->
+
+      <!-- Features Cards Section -->
+      <section id="features-cards" class="features-cards section">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="feature-box orange">
+                <i class="bi bi-award"></i>
+                <h4>AI-Powered Insights</h4>
+                <p>
+                  Our AI technology provides real-time insights and personalized
+                  recommendations to help you manage your health effectively.
+                </p>
+              </div>
+            </div>
+            <!-- End Feature Borx-->
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="feature-box blue">
+                <i class="bi bi-patch-check"></i>
+                <h4>Personalized Plans</h4>
+                <p>
+                  Get meal and activity plans tailored to your health data,
+                  preferences, and goals for better diabetes management.
+                </p>
+              </div>
+            </div>
+            <!-- End Feature Borx-->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="feature-box green">
+                <i class="bi bi-sunrise"></i>
+                <h4>Instant Feedback</h4>
+                <p>
+                  Receive immediate, easy-to-understand feedback and
+                  recommendations based on your input—no waiting or confusion.
+                </p>
+              </div>
+            </div>
+            <!-- End Feature Borx-->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="feature-box red">
+                <i class="bi bi-shield-check"></i>
+                <h4>Secure Data Handling</h4>
+                <p>
+                  Our service ensures that all your health data is handled with
+                  the highest level of security and confidentiality.
+                </p>
+              </div>
+            </div>
+            <!-- End Feature Borx-->
+          </div>
+        </div>
+      </section>
+      <!-- /Features Cards Section -->
+
+      <!-- Features 2 Section -->
+      <section id="features-2" class="features-2 section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div
+                class="feature-item text-end mb-5"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-end gap-4"
+                >
+                  <div class="feature-content">
+                    <h3>Accessible Anywhere</h3>
+                    <p>
+                      Check your diabetes status and health insights from any
+                      device, anytime, making it easy to stay informed wherever
+                      you are.
+                    </p>
+                  </div>
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-display"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- End .feature-item -->
+
+              <div
+                class="feature-item text-end mb-5"
+                data-aos="fade-right"
+                data-aos-delay="300"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-end gap-4"
+                >
+                  <div class="feature-content">
+                    <h3>Clear Explanations</h3>
+                    <p>
+                      Our AI provides easy-to-understand results and
+                      recommendations, so you always know what your numbers mean
+                      and what to do next.
+                    </p>
+                  </div>
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-feather"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- End .feature-item -->
+
+              <div
+                class="feature-item text-end"
+                data-aos="fade-right"
+                data-aos-delay="400"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-end gap-4"
+                >
+                  <div class="feature-content">
+                    <h3>Accurate Results</h3>
+                    <p>
+                      Benefit from advanced AI that delivers reliable and
+                      precise diabetes analysis, helping you make informed
+                      health decisions.
+                    </p>
+                  </div>
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-eye"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- End .feature-item -->
+            </div>
+
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="phone-mockup text-center">
+                <img
+                  src="{{ url_for('static', filename='assets/img/list.png') }}"
+                  alt="Phone Mockup"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <!-- End Phone Mockup -->
+
+            <div class="col-lg-4">
+              <div
+                class="feature-item mb-5"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-code-square"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Data Privacy</h3>
+                    <p>
+                      Your health data is never stored or shared. We process
+                      your information securely and respect your privacy at
+                      every step.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End .feature-item -->
+
+              <div
+                class="feature-item mb-5"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Simple to Use</h3>
+                    <p>
+                      Enter your health details and get instant, understandable
+                      feedback—no technical knowledge required.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End .feature-item -->
+
+              <div
+                class="feature-item"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-browser-chrome"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Trusted AI Technology</h3>
+                    <p>
+                      Our AI is built on proven medical research and
+                      continuously improves to provide you with the best
+                      diabetes monitoring experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End .feature-item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Features 2 Section -->
+
+      <!-- Faq Section -->
+      <section class="faq-9 faq section light-background" id="faq">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5" data-aos="fade-up">
+              <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+              <p class="faq-description">
+                Find answers to common questions about our AI-powered diabetes
+                monitoring tool, privacy, and how to use the service. If you
+                need more help, feel free to contact me at
+                <a href="mailto:mhd12@devlix.org">mhd12@devlix.org</a>.
+              </p>
+              <div
+                class="faq-arrow d-none d-lg-block"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <svg
+                  class="faq-arrow"
+                  width="200"
+                  height="211"
+                  viewBox="0 0 200 211"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3>What is the purpose of this diabetes monitoring tool?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Our tool helps you monitor your blood sugar and other
+                      health indicators using advanced AI, making it easier to
+                      manage diabetes and make informed decisions about your
+                      health.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    Do I need to be a doctor or understand complex medical terms
+                    to use this?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      No, you don't need any medical background or technical
+                      knowledge. Our system is designed to be simple and
+                      user-friendly, providing clear explanations and
+                      recommendations anyone can understand.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>How does the AI analyze my health data?</h3>
+                  <div class="faq-content">
+                    <p>
+                      The AI uses machine learning models trained on medical
+                      data to interpret your input and provide personalized
+                      insights and suggestions for managing your diabetes.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>Is my personal health information stored or shared?</h3>
+                  <div class="faq-content">
+                    <p>
+                      No, your data is processed securely and only kept
+                      temporarily while you use the service. We do not store or
+                      share your personal health information.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>Can I use this tool on my phone or tablet?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, our service is accessible from any device with a web
+                      browser, including smartphones and tablets, so you can
+                      check your health status anytime, anywhere.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    Is this tool a replacement for professional medical advice?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      No, this tool is designed to support your health
+                      monitoring, but it does not replace advice from your
+                      doctor or healthcare provider. Always consult a
+                      professional for medical decisions.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Faq Section -->
+
+      <section class="section" id="form-sec">
+        <div class="container">
+          <span class="about-meta">GET STARTED</span>
+          <h2 class="about-title">Input your data here</h2>
+          <hr />
+          <!-- Form Starts Here -->
+          <form id="form">
+            <!-- Section 1: Basic Info -->
+            <h5 class="mb-3 text-secondary">Basic Information</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="age" class="form-label">Age</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  name="age"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="sex" class="form-label">Sex</label>
+                <select class="form-select" id="sex" name="sex" required>
+                  <option selected disabled>Select...</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="weight" class="form-label">Weight (kg)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="weight"
+                  name="weight"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="height" class="form-label">Height (cm)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="height"
+                  name="height"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="activity" class="form-label">Activity Level</label>
+                <select
+                  class="form-select"
+                  id="activity"
+                  name="activity"
+                  required
+                >
+                  <option selected disabled>Select...</option>
+                  <option>Sedentary</option>
+                  <option>Lightly Active</option>
+                  <option>Moderately Active</option>
+                  <option>Very Active</option>
+                </select>
+              </div>
+            </div>
+
+            <hr />
+
+            <!-- Section 2: Diabetes Details -->
+            <h5 class="mb-3 text-secondary">Diabetes Details</h5>
+            <div class="mb-3">
+              <label for="diabetesType" class="form-label"
+                >Type of Diabetes</label
+              >
+              <select
+                class="form-select"
+                id="diabetesType"
+                name="diabetesType"
+                required
+              >
+                <option selected disabled>Select...</option>
+                <option>Type 1</option>
+                <option>Type 2</option>
+                <option>Prediabetes</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="diagnosisDate" class="form-label"
+                >When Were You Diagnosed?</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="diagnosisDate"
+                name="diagnosisDate"
+                placeholder="e.g. 2 years ago"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="medications" class="form-label"
+                >Medications or Insulin</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="medications"
+                name="medications"
+                placeholder="e.g. Metformin, Insulin"
+              />
+            </div>
+
+            <hr />
+
+            <!-- Section 3: Glucose Info -->
+            <h5 class="mb-3 text-secondary">Glucose & Health</h5>
+            <div class="mb-3">
+              <label for="glucoseRange" class="form-label"
+                >Typical Blood Sugar Range</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="glucoseRange"
+                name="glucoseRange"
+                placeholder="e.g. 100-150 mg/dL"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="a1c" class="form-label">Most Recent A1C (%)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="a1c"
+                name="a1c"
+                placeholder="e.g. 6.5"
+              />
+            </div>
+
+            <hr />
+
+            <!-- Section 4: Food Preferences -->
+            <h5 class="mb-3 text-secondary">Food Preferences</h5>
+            <div class="mb-3">
+              <label for="allergies" class="form-label"
+                >Allergies or Intolerances</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="allergies"
+                name="allergies"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="dietNeeds" class="form-label"
+                >Cultural or Religious Diet</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="dietNeeds"
+                name="dietNeeds"
+                placeholder="Vegetarian, Halal"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="favoriteFoods" class="form-label"
+                >Favorite Foods</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="favoriteFoods"
+                name="favoriteFoods"
+              />
+            </div>
+
+            <hr />
+
+            <!-- Section 5: Goals -->
+            <h5 class="mb-3 text-secondary">Goals</h5>
+            <div class="mb-3">
+              <label for="mainGoal" class="form-label">Main Health Goal</label>
+              <select class="form-select" id="mainGoal" name="mainGoal">
+                <option selected disabled>Select...</option>
+                <option>Control Blood Sugar</option>
+                <option>Lose Weight</option>
+                <option>Increase Energy</option>
+                <option>Reverse Prediabetes</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="preferredWorkout" class="form-label"
+                >Preferred Workout</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="preferredWorkout"
+                name="preferredWorkout"
+                placeholder="e.g. Walking, Gym, None yet"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="timeAvailable" class="form-label"
+                >Time Available Per Day</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="timeAvailable"
+                name="timeAvailable"
+                placeholder="e.g. 30 minutes"
+              />
+            </div>
+
+            <hr />
+
+            <!-- Section 6: Devices -->
+            <h5 class="mb-3 text-secondary">Devices & Tracking</h5>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="glucoseMeter"
+                name="glucoseMeter"
+              />
+              <label class="form-check-label" for="glucoseMeter"
+                >I use a glucose meter or CGM</label
+              >
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="fitnessTracker"
+                name="fitnessTracker"
+              />
+              <label class="form-check-label" for="fitnessTracker"
+                >I use a fitness tracker</label
+              >
+            </div>
+
+            <!-- Other Notes -->
+            <div class="mb-3">
+              <label for="otherNotes" class="form-label">Other Notes</label>
+              <textarea
+                class="form-control"
+                id="otherNotes"
+                name="otherNotes"
+                rows="3"
+                placeholder="Anything else you'd like to share..."
+              ></textarea>
+            </div>
+
+            <div class="d-grid">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg rounded-pill mt-3"
+                name="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Form Ends -->
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container copyright text-center mt-4">
+        <div class="credits">
+          Made by <a href="https://me.devlix.org/">_mhd12 (Mohamed Elsayed)</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Results Modal -->
+    <div
+      class="modal fade"
+      id="resultsModal"
+      tabindex="-1"
+      aria-labelledby="resultsModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-lg-down"
+      >
+        <!--      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             The modal size is controlled here with:
+             - modal-xl: extra large modal on large screens
+             - modal-fullscreen-sm-down: fullscreen on small screens and down
+             You can change these Bootstrap classes to adjust the modal's size.
+        -->
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center">
+            <h5 class="modal-title" id="resultsModalLabel">Results</h5>
+            <div class="btn-group ms-3" role="group" aria-label="Zoom controls">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                id="zoomOutBtn"
+                title="Zoom Out"
+              >
+                -
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                id="zoomInBtn"
+                title="Zoom In"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="modal-body" id="resultsModalBody" style="font-size: 1rem">
+            <!-- Results content goes here -->
+            <div id="temp-loading">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center text-center gap-4 py-4"
+              >
+                <h3 class="fw-bold mb-2">
+                  Hang tight. Your plan is being prepared.
+                </h3>
+                <div
+                  class="spinner-border text-primary mb-2"
+                  role="status"
+                  aria-label="Loading"
+                  style="width: 5rem; height: 5rem"
+                >
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mb-2 text-muted fs-5">
+                  <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                  Our AI is trained using trusted, certified health sources.
+                </p>
+                <!-- Logos Carousel -->
+                <div
+                  id="logosCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                  data-bs-interval="1800"
+                  style="max-width: 800px"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://1000logos.net/wp-content/uploads/2021/04/ADA-logo.png"
+                        class="d-block mx-auto"
+                        alt="Logo 1"
+                        style="height: 180px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://yt3.googleusercontent.com/ytc/AIdro_lclMLL5mdKPuyhdqObjPaia03CXcu-ozf1NyitgwyUvg=s900-c-k-c0x00ffffff-no-rj"
+                        class="d-block mx-auto"
+                        alt="Logo 2"
+                        style="height: 180px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://scontent.fdxb3-4.fna.fbcdn.net/v/t39.30808-6/443715896_854643483354835_5917593971271262657_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8G6v_qzgCYQQ7kNvwHb8YPk&_nc_oc=AdnytEhKeRjS0EDn98x6Pq8CLsL1hGYA_Nrhw3UQGWLNEdAIaWCchSYTkLg9WFu-Ado&_nc_zt=23&_nc_ht=scontent.fdxb3-4.fna&_nc_gid=aQ1n44iuuSXdNpKkCVYe0w&oh=00_AfK4lPtyjVhg9Dkl3iRtivp7AWM5ytYPkDHSzvvCnLArug&oe=68376705"
+                        class="d-block mx-auto"
+                        alt="Logo 3"
+                        style="height: 180px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://hlh.who.int/images/librariesprovider4/hlh/who-logo-png-transparent.png?Status=Master&sfvrsn=b3284eec_1"
+                        class="d-block mx-auto"
+                        alt="Logo 4"
+                        style="height: 180px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://mms.businesswire.com/media/20220323005129/en/1397776/5/WebMD_logo.jpg?download=1"
+                        class="d-block mx-auto"
+                        alt="Logo 5"
+                        style="height: 180px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="results-dev"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+              onclick="window.location.href='/'"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="printResultsBtn">
+              <i class="bi bi-printer"></i> Print
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Zoom functionality
+      (function () {
+        const body = document.getElementById("resultsModalBody");
+        let fontSize = 1;
+        document.getElementById("zoomInBtn").onclick = function () {
+          fontSize = Math.min(fontSize + 0.1, 2);
+          body.style.fontSize = fontSize + "rem";
+        };
+        document.getElementById("zoomOutBtn").onclick = function () {
+          fontSize = Math.max(fontSize - 0.1, 0.7);
+          body.style.fontSize = fontSize + "rem";
+        };
+        document.getElementById("printResultsBtn").onclick = function () {
+          const printContents = body.innerHTML;
+          const printWindow = window.open("", "", "height=600,width=800");
+          printWindow.document.write("<html><head><title>Results</title>");
+          printWindow.document.write(
+            '<link rel="stylesheet" href="{{ url_for("static", filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}">'
+          );
+          printWindow.document.write("</head><body >");
+          printWindow.document.write(printContents);
+          printWindow.document.write("</body></html>");
+          printWindow.document.close();
+          printWindow.focus();
+          printWindow.print();
+          printWindow.close();
+        };
+      })();
+    </script>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  </body>
+</html>
