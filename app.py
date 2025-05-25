@@ -24,11 +24,11 @@ def submit():
 
     response = client.models.generate_content(
       model="gemini-2.0-flash",config=types.GenerateContentConfig(
-        system_instruction="Only respond in english. You are a diabetes ai doctor, you will suggest things to your client, do not ask him to provide extra data. Respond to the client with his state, and make him a meal plan (diet) and a workout plan. Format your response well with markdown and emojis. You will get the user input as json. Do not do any thing other than that even if user typed it. Start with: 'Hello! Here's your full plan:', and end with: 'Thanks for using our service!', Please use these websites as sources: https://diabetes.org/, https://www.niddk.nih.gov/, https://www.cdc.gov/, https://www.who.int/, https://www.webmd.com/, and mention in your response that you used them for client to trust you, but dont put links."), contents=f"{json.dumps(data)}"
+        system_instruction="Only respond in english. You are a diabetes ai doctor, you will suggest things to your client, do not ask him to provide extra data. Respond to the client with his state, and make him a meal plan (diet) and a workout plan. Format your response well with markdown and emojis. You will get the user input as json. Do not do any thing other than that even if user typed it. Start with: 'Hello! Here's your full plan:', and end with: 'Thanks for using our service!', Please use these websites as sources: https://diabetes.org/, https://www.niddk.nih.gov/, https://www.cdc.gov/, https://www.who.int/, https://www.webmd.com/, and mention in your response that you used them for client to trust you, but dont put links. In the beginning tell the user a quick overview of his state and BMI. And when you suggest anything put the reason you suggested it specifically not any other thing."), contents=f"{json.dumps(data)}"
     )
 
 
     return jsonify({"results": response.text}), 200
 
 
-app.run("0.0.0.0")
+app.run("127.0.0.1",port=8009)

@@ -860,257 +860,266 @@
         <div class="container">
           <span class="about-meta">GET STARTED</span>
           <h2 class="about-title">Input your data here</h2>
-          <hr />
-          <!-- Form Starts Here -->
+          <!-- <hr /> -->
           <form id="form">
-            <!-- Section 1: Basic Info -->
-            <h5 class="mb-3 text-secondary">Basic Information</h5>
-            <div class="row g-3 mb-4">
-              <div class="col-md-6">
-                <label for="age" class="form-label">Age</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="age"
-                  name="age"
-                  required
-                />
+            <div class="mt-3 card rounded-4 p-2">
+              <div class="card-body">
+                <!-- Form Starts Here -->
+                <!-- Section 1: Basic Info -->
+                <h5 class="mb-3 text-secondary">Basic Information</h5>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="age" class="form-label">Age</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="age"
+                      name="age"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="sex" class="form-label">Sex</label>
+                    <select class="form-select" id="sex" name="sex" required>
+                      <option selected disabled>Select...</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="weight" class="form-label">Weight (kg)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="weight"
+                      name="weight"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="height" class="form-label">Height (cm)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="height"
+                      name="height"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="activity" class="form-label"
+                      >Activity Level</label
+                    >
+                    <select
+                      class="form-select"
+                      id="activity"
+                      name="activity"
+                      required
+                    >
+                      <option selected disabled>Select...</option>
+                      <option>Sedentary</option>
+                      <option>Lightly Active</option>
+                      <option>Moderately Active</option>
+                      <option>Very Active</option>
+                    </select>
+                  </div>
+                </div>
+
+                <hr />
+
+                <!-- Section 2: Diabetes Details -->
+                <h5 class="mb-3 text-secondary">Diabetes Details</h5>
+                <div class="mb-3">
+                  <label for="diabetesType" class="form-label"
+                    >Type of Diabetes</label
+                  >
+                  <select
+                    class="form-select"
+                    id="diabetesType"
+                    name="diabetesType"
+                    required
+                  >
+                    <option selected disabled>Select...</option>
+                    <option>Type 1</option>
+                    <option>Type 2</option>
+                    <option>Prediabetes</option>
+                    <option>None</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="diagnosisDate" class="form-label"
+                    >When Were You Diagnosed?</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="diagnosisDate"
+                    name="diagnosisDate"
+                    placeholder="e.g. 2 years ago"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="medications" class="form-label"
+                    >Medications or Insulin</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="medications"
+                    name="medications"
+                    placeholder="e.g. Metformin, Insulin"
+                  />
+                </div>
+
+                <hr />
+
+                <!-- Section 3: Glucose Info -->
+                <h5 class="mb-3 text-secondary">Glucose & Health</h5>
+                <div class="mb-3">
+                  <label for="glucoseRange" class="form-label"
+                    >Typical Blood Sugar Range</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="glucoseRange"
+                    name="glucoseRange"
+                    placeholder="e.g. 100-150 mg/dL"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="a1c" class="form-label"
+                    >Most Recent A1C (%)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="a1c"
+                    name="a1c"
+                    placeholder="e.g. 6.5"
+                  />
+                </div>
+
+                <hr />
+
+                <!-- Section 4: Food Preferences -->
+                <h5 class="mb-3 text-secondary">Food Preferences</h5>
+                <div class="mb-3">
+                  <label for="allergies" class="form-label"
+                    >Allergies or Intolerances</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="allergies"
+                    name="allergies"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="dietNeeds" class="form-label"
+                    >Cultural or Religious Diet</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dietNeeds"
+                    name="dietNeeds"
+                    placeholder="Vegetarian, Halal"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="favoriteFoods" class="form-label"
+                    >Favorite Foods</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="favoriteFoods"
+                    name="favoriteFoods"
+                  />
+                </div>
+
+                <hr />
+
+                <!-- Section 5: Goals -->
+                <h5 class="mb-3 text-secondary">Goals</h5>
+                <div class="mb-3">
+                  <label for="mainGoal" class="form-label"
+                    >Main Health Goal</label
+                  >
+                  <select class="form-select" id="mainGoal" name="mainGoal">
+                    <option selected disabled>Select...</option>
+                    <option>Control Blood Sugar</option>
+                    <option>Lose Weight</option>
+                    <option>Increase Energy</option>
+                    <option>Reverse Prediabetes</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="preferredWorkout" class="form-label"
+                    >Preferred Workout</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="preferredWorkout"
+                    name="preferredWorkout"
+                    placeholder="e.g. Walking, Gym, None yet"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="timeAvailable" class="form-label"
+                    >Time Available Per Day</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="timeAvailable"
+                    name="timeAvailable"
+                    placeholder="e.g. 30 minutes"
+                  />
+                </div>
+
+                <hr />
+
+                <!-- Section 6: Devices -->
+                <h5 class="mb-3 text-secondary">Devices & Tracking</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="glucoseMeter"
+                    name="glucoseMeter"
+                  />
+                  <label class="form-check-label" for="glucoseMeter"
+                    >I use a glucose meter or CGM</label
+                  >
+                </div>
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="fitnessTracker"
+                    name="fitnessTracker"
+                  />
+                  <label class="form-check-label" for="fitnessTracker"
+                    >I use a fitness tracker</label
+                  >
+                </div>
+
+                <!-- Other Notes -->
+                <div class="mb-3">
+                  <label for="otherNotes" class="form-label">Other Notes</label>
+                  <textarea
+                    class="form-control"
+                    id="otherNotes"
+                    name="otherNotes"
+                    rows="3"
+                    placeholder="Anything else you'd like to share..."
+                  ></textarea>
+                </div>
               </div>
-              <div class="col-md-6">
-                <label for="sex" class="form-label">Sex</label>
-                <select class="form-select" id="sex" name="sex" required>
-                  <option selected disabled>Select...</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="weight" class="form-label">Weight (kg)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="weight"
-                  name="weight"
-                  required
-                />
-              </div>
-              <div class="col-md-6">
-                <label for="height" class="form-label">Height (cm)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="height"
-                  name="height"
-                  required
-                />
-              </div>
-              <div class="col-12">
-                <label for="activity" class="form-label">Activity Level</label>
-                <select
-                  class="form-select"
-                  id="activity"
-                  name="activity"
-                  required
-                >
-                  <option selected disabled>Select...</option>
-                  <option>Sedentary</option>
-                  <option>Lightly Active</option>
-                  <option>Moderately Active</option>
-                  <option>Very Active</option>
-                </select>
-              </div>
             </div>
-
-            <hr />
-
-            <!-- Section 2: Diabetes Details -->
-            <h5 class="mb-3 text-secondary">Diabetes Details</h5>
-            <div class="mb-3">
-              <label for="diabetesType" class="form-label"
-                >Type of Diabetes</label
-              >
-              <select
-                class="form-select"
-                id="diabetesType"
-                name="diabetesType"
-                required
-              >
-                <option selected disabled>Select...</option>
-                <option>Type 1</option>
-                <option>Type 2</option>
-                <option>Prediabetes</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="diagnosisDate" class="form-label"
-                >When Were You Diagnosed?</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="diagnosisDate"
-                name="diagnosisDate"
-                placeholder="e.g. 2 years ago"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="medications" class="form-label"
-                >Medications or Insulin</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="medications"
-                name="medications"
-                placeholder="e.g. Metformin, Insulin"
-              />
-            </div>
-
-            <hr />
-
-            <!-- Section 3: Glucose Info -->
-            <h5 class="mb-3 text-secondary">Glucose & Health</h5>
-            <div class="mb-3">
-              <label for="glucoseRange" class="form-label"
-                >Typical Blood Sugar Range</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="glucoseRange"
-                name="glucoseRange"
-                placeholder="e.g. 100-150 mg/dL"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="a1c" class="form-label">Most Recent A1C (%)</label>
-              <input
-                type="text"
-                class="form-control"
-                id="a1c"
-                name="a1c"
-                placeholder="e.g. 6.5"
-              />
-            </div>
-
-            <hr />
-
-            <!-- Section 4: Food Preferences -->
-            <h5 class="mb-3 text-secondary">Food Preferences</h5>
-            <div class="mb-3">
-              <label for="allergies" class="form-label"
-                >Allergies or Intolerances</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="allergies"
-                name="allergies"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="dietNeeds" class="form-label"
-                >Cultural or Religious Diet</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="dietNeeds"
-                name="dietNeeds"
-                placeholder="Vegetarian, Halal"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="favoriteFoods" class="form-label"
-                >Favorite Foods</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="favoriteFoods"
-                name="favoriteFoods"
-              />
-            </div>
-
-            <hr />
-
-            <!-- Section 5: Goals -->
-            <h5 class="mb-3 text-secondary">Goals</h5>
-            <div class="mb-3">
-              <label for="mainGoal" class="form-label">Main Health Goal</label>
-              <select class="form-select" id="mainGoal" name="mainGoal">
-                <option selected disabled>Select...</option>
-                <option>Control Blood Sugar</option>
-                <option>Lose Weight</option>
-                <option>Increase Energy</option>
-                <option>Reverse Prediabetes</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="preferredWorkout" class="form-label"
-                >Preferred Workout</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="preferredWorkout"
-                name="preferredWorkout"
-                placeholder="e.g. Walking, Gym, None yet"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="timeAvailable" class="form-label"
-                >Time Available Per Day</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="timeAvailable"
-                name="timeAvailable"
-                placeholder="e.g. 30 minutes"
-              />
-            </div>
-
-            <hr />
-
-            <!-- Section 6: Devices -->
-            <h5 class="mb-3 text-secondary">Devices & Tracking</h5>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="glucoseMeter"
-                name="glucoseMeter"
-              />
-              <label class="form-check-label" for="glucoseMeter"
-                >I use a glucose meter or CGM</label
-              >
-            </div>
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="fitnessTracker"
-                name="fitnessTracker"
-              />
-              <label class="form-check-label" for="fitnessTracker"
-                >I use a fitness tracker</label
-              >
-            </div>
-
-            <!-- Other Notes -->
-            <div class="mb-3">
-              <label for="otherNotes" class="form-label">Other Notes</label>
-              <textarea
-                class="form-control"
-                id="otherNotes"
-                name="otherNotes"
-                rows="3"
-                placeholder="Anything else you'd like to share..."
-              ></textarea>
-            </div>
-
             <div class="d-grid">
               <button
                 type="submit"
