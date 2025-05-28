@@ -16,4 +16,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Use Gunicorn for production WSGI serving
-CMD ["gunicorn", "--bind", "127.0.0.1:8009", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]

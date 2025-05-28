@@ -29,6 +29,3 @@ def submit():
 
 
     return jsonify({"results": response.text}), 200
-
-
-app.run("127.0.0.1",port=8009)

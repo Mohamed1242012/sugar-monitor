@@ -3,7 +3,7 @@ services:
   flask-app:
     build: .
     ports:
-      - "8009:5000"
+      - "5000:5000"
     restart: always
     environment:
       - FLASK_ENV=production
