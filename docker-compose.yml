@@ -7,17 +7,3 @@ services:
     restart: always
     environment:
       - FLASK_ENV=production
-  flask-app-2:
-    build: .
-    ports:
-      - "5001:5000"
-    restart: always
-    environment:
-      - FLASK_ENV=production
-  flask-app-3:
-    build: .
-    ports:
-      - "5002:5000"
-    restart: always
-    environment:
-      - FLASK_ENV=production
