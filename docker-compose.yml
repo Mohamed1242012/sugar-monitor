@@ -1,6 +1,6 @@
 ---
 services:
-  flask-app-1:
+  sugar-monitor-1:
     build: .
     restart: always
     environment:
@@ -8,7 +8,7 @@ services:
       - PORT=5000
     networks:
       - pangolin
-  flask-app-2:
+  sugar-monitor-2:
     build: .
     restart: always
     environment:
@@ -16,7 +16,7 @@ services:
       - PORT=5001
     networks:
       - pangolin
-  flask-app-3:
+  sugar-monitor-3:
     build: .
     restart: always
     environment:
